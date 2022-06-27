@@ -17,15 +17,16 @@ const UploadForm = () => {
         }
     }
     return (
-        <div className="uploadForm">
-            <form>
+        <form>
+            <label>
                 <input type="file" onChange={changeHandler}/>
-                <div className='output'>
-                    { error && <div className='error'>{error}</div> }
-                    { file && <div>{file.name}</div> }
-                </div>
-            </form>
-        </div>
+                <span>+</span>
+            </label>
+            <div className='output'>
+                { error && <div className='error'>{error}</div> }
+                { file && <div>{file.name}</div> }
+            </div>
+        </form>
     )
 }
 
